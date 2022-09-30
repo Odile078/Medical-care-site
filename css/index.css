@@ -230,6 +230,7 @@ ul li{
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 245, 240, 1);
+    padding: 3rem 0;
 }
 .contact{
     padding: 3rem;
@@ -371,6 +372,7 @@ ul li{
     /* contact */
     .contact{
         max-width: 60%;
+
     }
     .contact-form{
         flex-direction: row
@@ -398,7 +400,7 @@ ul li{
     .hero{
         padding: 5rem;
     }
-    .hero div:first-child{
+    .hero__content{
         width: 50%;
     }
     .hero__headline br{
