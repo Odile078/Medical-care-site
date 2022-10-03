@@ -52,11 +52,11 @@ ul li{
 .nav__item .nav__link:hover, .nav__item .nav__link:active{
     color: rgba(27, 160, 171, 1);
 }
-.header-action{
+.header__action{
     display: flex;
     align-items: center;
 }
-.header-action button{
+.header__action button{
     margin:0 10px  ;
     
 }
@@ -64,14 +64,14 @@ ul li{
 .nav__list{
     display: none;
 }
-.header-action__menu-icon{
+.header__menu-icon{
     color: rgba(115, 115, 115, 1);
     border: 0;
     margin: 0;
     padding: 0;
     background-color: transparent;
 } 
-.header-action__menu-icon{
+.header__menu-icon{
     color: rgba(115, 115, 115, 1);
     width: 1.5rem;
     height: 1.5rem;
