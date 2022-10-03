@@ -32,7 +32,7 @@ ul li{
     margin: 0 2rem 0 0;
     letter-spacing: 0.1px;
 }
-.nav-list{
+.nav__list{
     display: flex;
     align-items: center;
     list-style: none;
@@ -60,12 +60,10 @@ ul li{
     margin:0 10px  ;
     
 }
-.nav--default{
-    display:none;
+
+.nav__list{
+    display: none;
 }
-.nav--mobile{
-    display:block;
-} 
 .header-action__menu-icon{
     color: rgba(115, 115, 115, 1);
     border: 0;
@@ -94,7 +92,7 @@ ul li{
     cursor: pointer;
 }
 
-.button--bg-white:hover{
+.button--primary:hover{
     background-color: rgba(27, 160, 171, 1);
     color: #fff;
     border: rgba(27, 160, 171, 1);
@@ -124,21 +122,26 @@ ul li{
 .button--after-icon-chevron:hover::after{
     color: #fff;
 }
-.button--bg-green{
+.button--secondary{
     background-color: rgba(27, 160, 171, 1);
     color: #fff;
     text-transform: uppercase;
     border-width: 1px;
     border-color: transparent;
 }
-.button--bg-green:hover{
+.button--secondary:hover{
     background-color: #fff;
     color: rgba(27, 160, 171, 1);
 }
-.button--border-green{
+.button--border-secondary{
     border-color: rgba(27, 160, 171, 1);
 }
-
+.button--visibility-mobile{
+    display: block;
+}
+.button--visibility-default{
+    display: none;
+}
 /* Display */
 .hidden{
     display: none;
@@ -157,10 +160,10 @@ ul li{
     align-content: center;
 }
 
-.hero-action{
+.hero__action{
     display: flex;
 }
-.hero-action button{
+.hero__action button{
     margin: 0 10px 0 0;
     /* flex: 1 1 0% */
 }
@@ -186,7 +189,7 @@ ul li{
     padding: 1.5rem;
 }
 
-.team-members{
+.team__members{
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1rem;
@@ -200,12 +203,11 @@ ul li{
     border-radius: 20px;
 }
 .card__img{
-    /* height: 100%; */
     width: 100%;
     object-fit: cover;
     object-position: center;
 }
-.card-body{
+.card__body{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -213,12 +215,12 @@ ul li{
     padding: 1rem;
 }
 
-.card-list{
+.card__list{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card-list__item{
+.card__item{
     margin: 0 10px 0 0;
 }
 
@@ -232,26 +234,26 @@ ul li{
     background-color: rgba(255, 245, 240, 1);
     padding: 3rem 0;
 }
-.contact{
+.footer__contact{
     padding: 3rem;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
 }
-.contact-form{
+.form{
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 3rem 0;
 }
-.contact-form__group{
+.form__group{
     display: flex;
     align-items: center;
     flex: 1 1 0%;
     margin: 0 0 1.5rem 0;
 }
-.contact-form__label{
+.form__label{
     position: absolute;
     width: 1px;
     height: 1px;
@@ -262,7 +264,7 @@ ul li{
     white-space: nowrap;
     border-width: 0;
 }
-.contact-form__input{
+.form__input{
     height: 100%;
     width: 100%;
     background-color: #fff;
@@ -276,7 +278,7 @@ ul li{
     line-height: 1.25rem;
     
 }
-.contact-form__input::placeholder{
+.form__input::placeholder{
     color: rgba(115, 115, 115, 1);
     letter-spacing: 0.2px;
     font-weight: 400;
@@ -356,7 +358,7 @@ ul li{
         padding: 5rem;
     }
     /* team */
-    .team-members{
+    .team__members{
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .team__description{
@@ -369,18 +371,18 @@ ul li{
     .team{
         padding: 5rem;
     }
-    /* contact */
-    .contact{
+    /* footer__contact */
+    .footer__contact{
         max-width: 60%;
 
     }
-    .contact-form{
+    .form{
         flex-direction: row
     }
-    .contact-form__group{
+    .form__group{
         margin: 0 0 0 0;
     }
-    .contact-form__input {
+    .form__input {
         padding: 0 1.2rem;
     }
 }
@@ -390,10 +392,13 @@ ul li{
     .header{
         padding: 1rem 5.5rem;    
     }
-    .nav--default{
+    .button--visibility-default{
         display: flex;
     }
-    .nav--mobile{
+    .nav__list{
+        display: flex;
+    }
+    .button--visibility-mobile{
         display: none;
     } 
     /* hero */
@@ -423,17 +428,20 @@ ul li{
     }
     /* team */
     
-    .team-members{
+    .team__members{
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
     
   }
   /* lg :@media (min-width: 1024px) { ... }*/
   @media screen and (min-width: 1024px) {
-    .nav--default{
+    .button--visibility-default{
         display: flex;
     }
-    .nav--mobile{
+    .nav__list{
+        display: flex;
+    }
+    .button--visibility-mobile{
         display: none;
     } 
     
