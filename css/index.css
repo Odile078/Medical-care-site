@@ -49,16 +49,13 @@ ul li{
     letter-spacing: 0.2px;
     text-decoration: none;
 }
-.nav__item .nav__link:hover, .nav__item .nav__link:active{
+ .nav__link:hover,  .nav__link:active{
     color: rgba(27, 160, 171, 1);
 }
 .header__action{
     display: flex;
     align-items: center;
-}
-.header__action button{
-    margin:0 10px  ;
-    
+    gap: 10px;
 }
 
 .nav__list{
@@ -162,11 +159,9 @@ ul li{
 
 .hero__action{
     display: flex;
+    gap: 10px;
 }
-.hero__action button{
-    margin: 0 10px 0 0;
-    /* flex: 1 1 0% */
-}
+
 /* Our experts section */
 .our-experts{
     display: grid;
